@@ -13,6 +13,8 @@ var imagesArray = [
     '/assets/img/plane.jpg',
 
     ];
+    
+   
     function shuffle(a) {
         var j, x, i;
         for (i = a.length - 1; i > 0; i--) {
@@ -30,3 +32,17 @@ var imagesArray = [
         const lugar = document.querySelector(".car")
         lugar.appendChild(image)
     })
+    var letter = "c"
+    for(let i = 0; i < imagesArray.length;i++){
+        if (imagesArray[i].name[0] === letter) {
+            console.log(imagesArray[i.name])
+        }
+    }
+// displayImages(){
+//     shuffle(this.stickers).forEach(function(element){
+//         var image = new Image(150,150)
+//         image.src = element.image
+//         const lugar = document.querySelector(".car")
+//         lugar.appendChild(image)
+//     })
+//     }

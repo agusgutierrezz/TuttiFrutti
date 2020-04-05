@@ -37,21 +37,43 @@ class Game {
         return this.letters[ Math.floor(Math.random() * this.letters.length)]
     }
     displayImages(){
+        let currentLetter = this.displayLetter()
         this.shuffle(this.stickers).forEach(function(element){
-            var image = new Image(150,150)
-            image.src = element.image
-            const lugar = document.querySelector(".car")
-            lugar.appendChild(image)
-        })
+            if(element.name[0] !== currentLetter){
+                var image = new Image(150,150)
+                image.src = element.image
+                const lugar = document.querySelector(".car")
+                const newImage = lugar.appendChild(image)
+                newImage.addEventListener('click', event => {
+                    newImage.classList.add('animated', 'wobble')
+                  });
+            } else {
+                var image = new Image(150,150)
+                image.src = element.image
+                const lugar = document.querySelector(".car")
+                const newImage = lugar.appendChild(image)
+                newImage.addEventListener('click', event => {
+                    newImage.classList.add('animated', 'fadeOutUp')
+                  });
+            }
+            })
         }
         displayLetter(){
             let letter = document.querySelector(".letterContainer")
             let image = new Image(150,150)
-            image.src = this.getRandomLetter().image
-            letter.appendChild(image) 
-            
+            let randomImage = this.getRandomLetter()
+            image.src = randomImage.image
+            letter.appendChild(image)
+            return randomImage.name
         }
-}
+       
+    }
+    
+     
 
+    
+   
+  
+    // .classList.add('animated', 'wobble') 
 
 
