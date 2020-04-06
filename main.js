@@ -2,6 +2,7 @@ class Sticker{
     constructor(name,image){
         this.name = name
         this.image = image
+        this.points = 0
     }
     
 }
@@ -16,6 +17,7 @@ class Game {
     constructor(){
         this.stickers = [];
         this.letters = [];
+        this.score = 100;
     }
      addSticker(sticker){
          this.stickers.push(sticker)
@@ -38,6 +40,11 @@ class Game {
     }
     displayImages(){
         let currentLetter = this.displayLetter()
+        const scorePlace = document.querySelector(".score span")
+        let total = this.score
+        let right = []
+        let wrong = []
+        scorePlace.innerHTML = total 
         this.shuffle(this.stickers).forEach(function(element){
             if(element.name[0] !== currentLetter){
                 var image = new Image(150,150)
@@ -45,18 +52,29 @@ class Game {
                 const lugar = document.querySelector(".car")
                 const newImage = lugar.appendChild(image)
                 newImage.addEventListener('click', event => {
-                    newImage.classList.add('animated', 'wobble')
-                  });
+                newImage.classList.add('animated', 'wobble')
+                scorePlace.innerHTML = total -= 30
+                if(scorePlace.innerHTML <= 10){
+                    alert("you lost")
+                }
+                })
+                
             } else {
                 var image = new Image(150,150)
                 image.src = element.image
                 const lugar = document.querySelector(".car")
                 const newImage = lugar.appendChild(image)
                 newImage.addEventListener('click', event => {
-                    newImage.classList.add('animated', 'fadeOutUp')
-                  });
+                newImage.classList.add('animated', 'fadeOutUp')
+                scorePlace.innerHTML = total += 10
+                if(scorePlace.innerHTML == 130 ){
+                    alert("you win")
+                }
+                });
             }
+            
             })
+           
         }
        
         displayLetter(){
@@ -67,7 +85,9 @@ class Game {
             letter.appendChild(image).classList.add('animated', 'rubberBand')
             return randomImage.name
         }
-       
+        displayScore(){
+        
+        }
     }
     
      

@@ -46,3 +46,32 @@ var imagesArray = [
 //         lugar.appendChild(image)
 //     })
 //     }
+// displayImages(){
+//     let currentLetter = this.displayLetter()
+//     const scorePlace = document.querySelector(".score span")
+//     let total = this.score
+//     scorePlace.innerHTML = total 
+//     this.shuffle(this.stickers).forEach(function(element){
+//         if(element.name[0] !== currentLetter){
+//             var image = new Image(150,150)
+//             image.src = element.image
+//             const lugar = document.querySelector(".car")
+//             const newImage = lugar.appendChild(image)
+//             newImage.addEventListener('click', event => {
+//             newImage.classList.add('animated', 'wobble')
+//             scorePlace.innerHTML = total -= 10
+//             })
+
+//         } else {
+//             var image = new Image(150,150)
+//             image.src = element.image
+//             const lugar = document.querySelector(".car")
+//             const newImage = lugar.appendChild(image)
+//             newImage.addEventListener('click', event => {
+//             newImage.classList.add('animated', 'fadeOutUp')
+//             scorePlace.innerHTML = total += 10
+//             });
+//         }
+//         })
+        
+//     }
