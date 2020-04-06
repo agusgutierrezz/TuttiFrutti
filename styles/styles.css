@@ -2,7 +2,7 @@ body{
     position: relative;
     background-image: url("/agusgutierrezz-tuttiFrutti/assets/img/3644242.jpg");
     background-size: cover;
-    background-position: center;
+    
 
 }
 .displayGame {
@@ -18,7 +18,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 .car{
     margin-top: 10vh;
@@ -30,6 +30,8 @@ body{
 }
 .car img{
     display: block;
+    border: 7px inset #FF00B7;
+    border-radius: 19px 19px 0px 27px;
     margin: 10px;
 }
 .winner {
@@ -51,4 +53,37 @@ body{
 }
 .loser{
     display: none;
+}
+.letter{
+    /* background: linear-gradient(45deg,#F17C58,#E94584,#24AADB,#27DBB1,#FFDC18,#FF3706); */
+    background-color:#ffd400 ;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 51%;
+}
+.letter h1{
+    font-family: 'Barrio', cursive;
+    font-size: 100px;
+    color:#FF00B7 ;
+    font-weight: bold;
+}
+.title h1{
+    font-family: 'Barrio', cursive;
+    font-size: 60px;
+    color:#ffd400;
+    font-weight: bold;
+}
+.title p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+
+}
+.title{
+    padding: 8px;
+    text-align: center;
 }

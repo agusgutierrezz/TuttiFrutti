@@ -20,8 +20,8 @@ class Sticker{
     }
 }
 class Letter extends Sticker{
-    constructor(name,image){
-        super(name,image)
+    constructor(name){
+        super(name)
     }
 }
 
@@ -89,12 +89,11 @@ class Game {
         }
        
         displayLetter(){
-            let letter = document.querySelector(".letterContainer")
-            let image = new Image(150,150)
-            let randomImage = this.getRandomLetter()
-            image.src = randomImage.image
-            letter.appendChild(image).classList.add('animated',"infinite",'rubberBand')
-            return randomImage.name
+            let letter = document.querySelector(".letter h1")
+            let randomLetter = this.getRandomLetter()
+            let text = randomLetter.name
+            letter.innerHTML= text
+            return randomLetter.name
         }
         displayScore(){
         
