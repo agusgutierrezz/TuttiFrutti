@@ -75,3 +75,11 @@ var imagesArray = [
 //         })
         
 //     }
+// displayLetter(){
+//     let letter = document.querySelector(".letterContainer")
+//     let image = new Image(150,150)
+//     let randomImage = this.getRandomLetter()
+//     image.src = randomImage.image
+//     letter.appendChild(image).classList.add('animated',"infinite",'rubberBand')
+//     return randomImage.name
+// }

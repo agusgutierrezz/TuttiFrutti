@@ -8,9 +8,15 @@ class Sticker{
         let node = document.querySelector(".loser");
         node.classList.remove("loser")
         node.classList.add("winner","animated","infinite","swing")
+        let background = document.querySelector(".displayGame")
+        background.classList.add("loser")
     }
     gameReload(){
-        location.reload()
+        let timeoutID
+        timeoutID = window.setTimeout(reload, 2000);
+        function reload(){
+            location.reload()
+        }
     }
 }
 class Letter extends Sticker{
@@ -71,7 +77,8 @@ class Game {
                 newImage.classList.add('animated', 'fadeOutUp')
                 scorePlace.innerHTML = total += 10
                 if(scorePlace.innerHTML >= 130){
-                    element.party()     
+                    element.party()
+                    element.gameReload()
                 } 
                 
                 });
@@ -86,7 +93,7 @@ class Game {
             let image = new Image(150,150)
             let randomImage = this.getRandomLetter()
             image.src = randomImage.image
-            letter.appendChild(image).classList.add('animated','rubberBand')
+            letter.appendChild(image).classList.add('animated',"infinite",'rubberBand')
             return randomImage.name
         }
         displayScore(){
@@ -100,5 +107,4 @@ class Game {
    
   
     // .classList.add('animated', 'wobble') 
-
 

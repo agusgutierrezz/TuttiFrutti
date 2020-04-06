@@ -1,21 +1,27 @@
 body{
     position: relative;
+    background-image: url("/agusgutierrezz-tuttiFrutti/assets/img/3644242.jpg");
+    background-size: cover;
+    background-position: center;
+
 }
 .displayGame {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+   
 }
 .cardBox{
     width: 60%;
 }
 .letterContainer {
-    width: 40%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .car{
+    margin-top: 10vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
