@@ -1,4 +1,6 @@
-
+body{
+    position: relative;
+}
 .displayGame {
     display: flex;
     justify-content: space-between;
@@ -23,4 +25,24 @@
 .car img{
     display: block;
     margin: 10px;
+}
+.winner {
+    background-image: url("/agusgutierrezz-tuttiFrutti/assets/img/winner.jpg");
+    background-position: top;
+    width: 50%;
+    height: 50vh;
+    position: absolute;
+    top: 20vh;
+    right: 50vh;
+    z-index: 1;
+}
+.winner h1{
+    font-family: 'Henny Penny', cursive;
+    margin-top: 17vh;
+    margin-left: 30vh;
+    font-size: 11vh;
+    color: #FF3344;
+}
+.loser{
+    display: none;
 }

@@ -4,7 +4,14 @@ class Sticker{
         this.image = image
         this.points = 0
     }
-    
+    party(){
+        let node = document.querySelector(".loser");
+        node.classList.remove("loser")
+        node.classList.add("winner","animated","infinite","swing")
+    }
+    gameReload(){
+        location.reload()
+    }
 }
 class Letter extends Sticker{
     constructor(name,image){
@@ -42,8 +49,8 @@ class Game {
         let currentLetter = this.displayLetter()
         const scorePlace = document.querySelector(".score span")
         let total = this.score
-        let right = []
-        let wrong = []
+        let right = 0
+        let wrong = 0
         scorePlace.innerHTML = total 
         this.shuffle(this.stickers).forEach(function(element){
             if(element.name[0] !== currentLetter){
@@ -53,12 +60,8 @@ class Game {
                 const newImage = lugar.appendChild(image)
                 newImage.addEventListener('click', event => {
                 newImage.classList.add('animated', 'wobble')
-                scorePlace.innerHTML = total -= 30
-                if(scorePlace.innerHTML <= 10){
-                    alert("you lost")
-                }
-                })
-                
+               
+            })
             } else {
                 var image = new Image(150,150)
                 image.src = element.image
@@ -67,9 +70,10 @@ class Game {
                 newImage.addEventListener('click', event => {
                 newImage.classList.add('animated', 'fadeOutUp')
                 scorePlace.innerHTML = total += 10
-                if(scorePlace.innerHTML == 130 ){
-                    alert("you win")
-                }
+                if(scorePlace.innerHTML >= 130){
+                    element.party()     
+                } 
+                
                 });
             }
             
@@ -82,7 +86,7 @@ class Game {
             let image = new Image(150,150)
             let randomImage = this.getRandomLetter()
             image.src = randomImage.image
-            letter.appendChild(image).classList.add('animated', 'rubberBand')
+            letter.appendChild(image).classList.add('animated','rubberBand')
             return randomImage.name
         }
         displayScore(){
