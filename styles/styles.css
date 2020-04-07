@@ -1,6 +1,6 @@
 body{
     position: relative;
-    background-image: url("/agusgutierrezz-tuttiFrutti/assets/img/3644242.jpg");
+    background-image: url("/assets/img/3644242.jpg");
     background-size: cover;
     
 
@@ -35,7 +35,7 @@ body{
     margin: 10px;
 }
 .winner {
-    background-image: url("/agusgutierrezz-tuttiFrutti/assets/img/winner.jpg");
+    background-image: url("/assets/img/winner.jpg");
     background-position: top;
     width: 50%;
     height: 50vh;
@@ -51,7 +51,23 @@ body{
     font-size: 11vh;
     color: #FF3344;
 }
+.help{
+    background-position: top;
+    width: 50%;
+    height: 50vh;
+    position: absolute;
+    top: 20vh;
+    right: 50vh;
+    z-index: 1;
+    background-color: #FF00B7;
+}
 .loser{
+    display: none;
+}
+.exitHelp{
+    display : none;
+}
+.helper{
     display: none;
 }
 .letter{
@@ -86,4 +102,8 @@ body{
 .title{
     padding: 8px;
     text-align: center;
+}
+.score{
+    color: white;
+    font-weight: bold;
 }

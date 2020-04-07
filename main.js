@@ -18,6 +18,19 @@ class Sticker{
             location.reload()
         }
     }
+    askForHelp(){
+        let node = document.querySelector(".helper");
+        node.classList.remove("helper")
+        node.classList.add("help")
+        let button = document.getElementById("hint")
+        button.onclick = function back(){
+            node.classList.add("exitHelp")
+        }
+       
+    }
+
+  
+
 }
 class Letter extends Sticker{
     constructor(name){
@@ -55,8 +68,7 @@ class Game {
         let currentLetter = this.displayLetter()
         const scorePlace = document.querySelector(".score span")
         let total = this.score
-        let right = 0
-        let wrong = 0
+        let wrong = []
         scorePlace.innerHTML = total 
         this.shuffle(this.stickers).forEach(function(element){
             if(element.name[0] !== currentLetter){
@@ -66,7 +78,10 @@ class Game {
                 const newImage = lugar.appendChild(image)
                 newImage.addEventListener('click', event => {
                 newImage.classList.add('animated', 'wobble')
-               
+                wrong.push(element)
+                if(wrong.length >= 3){
+                    element.askForHelp()
+                }
             })
             } else {
                 var image = new Image(150,150)
@@ -80,12 +95,9 @@ class Game {
                     element.party()
                     element.gameReload()
                 } 
-                
                 });
             }
-            
             })
-           
         }
        
         displayLetter(){
@@ -101,8 +113,6 @@ class Game {
     }
     
      
-
-    
    
   
     // .classList.add('animated', 'wobble') 
