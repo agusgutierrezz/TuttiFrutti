@@ -94,7 +94,7 @@ class Game {
                 newImage.classList.add('animated', 'fadeOutUp')
                 right.push(element)
                 chances.innerHTML = "Fantastic!!"
-                if(right.length >= 3){
+                if(right.length === 3){
                     element.party()
                     element.gameReload()
                 } 

@@ -52,6 +52,11 @@ body{
     font-size: 11vh;
     color: #FF3344;
 }
+.help p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 6vh;
+    color: #FF3344;
+}
 .help{
     background-position: top;
     width: 50%;
@@ -60,7 +65,12 @@ body{
     top: 20vh;
     right: 50vh;
     z-index: 1;
-    background-color: #FF00B7;
+    background-color: #ffd400;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .loser{
     display: none;
