@@ -28,6 +28,7 @@ body{
     justify-content: space-around;
     align-items: center;
 }
+
 .car img{
     display: block;
     border: 7px inset #FF00B7;
@@ -103,7 +104,10 @@ body{
     padding: 8px;
     text-align: center;
 }
-.score{
+.chances{
     color: white;
     font-weight: bold;
+}
+.score {
+    display: none;
 }

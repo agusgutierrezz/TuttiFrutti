@@ -18,20 +18,14 @@ class Sticker{
             location.reload()
         }
     }
-    askForHelp(){
+    loseMessage(){
         let node = document.querySelector(".helper");
         node.classList.remove("helper")
         node.classList.add("help")
-        let button = document.getElementById("hint")
-        button.onclick = function back(){
-            node.classList.add("exitHelp")
         }
        
     }
 
-  
-
-}
 class Letter extends Sticker{
     constructor(name){
         super(name)
@@ -67,8 +61,11 @@ class Game {
     displayImages(){
         let currentLetter = this.displayLetter()
         const scorePlace = document.querySelector(".score span")
+        const chances = document.querySelector(".chances span")
+        console.log(chances)
         let total = this.score
-        let wrong = []
+        let wrong = 3
+        let right = []
         scorePlace.innerHTML = total 
         this.shuffle(this.stickers).forEach(function(element){
             if(element.name[0] !== currentLetter){
@@ -78,9 +75,14 @@ class Game {
                 const newImage = lugar.appendChild(image)
                 newImage.addEventListener('click', event => {
                 newImage.classList.add('animated', 'wobble')
-                wrong.push(element)
-                if(wrong.length >= 3){
-                    element.askForHelp()
+                wrong -= 1
+                chances.innerHTML = "You have " + wrong +" more tries"
+                if(wrong <= 1){
+                    chances.innerHTML = "This is your last chance!"
+                }
+                if(wrong === 0){
+                    element.loseMessage()
+                    element.gameReload()
                 }
             })
             } else {
@@ -90,8 +92,9 @@ class Game {
                 const newImage = lugar.appendChild(image)
                 newImage.addEventListener('click', event => {
                 newImage.classList.add('animated', 'fadeOutUp')
-                scorePlace.innerHTML = total += 10
-                if(scorePlace.innerHTML >= 130){
+                right.push(element)
+                chances.innerHTML = "Fantastic!!"
+                if(right.length >= 3){
                     element.party()
                     element.gameReload()
                 } 
