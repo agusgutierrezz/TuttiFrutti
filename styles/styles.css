@@ -30,7 +30,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    max-width: fit-content;
+    max-width: 119vh;
 }
 
 .car img{
@@ -40,7 +40,7 @@ body{
     margin: 10px;
 }
 .winner {
-    background-image: url("/assets/img/winner.jpg");
+    background-image: url("../assets/img/winner.jpg");
     background-position: top;
     width: 50%;
     height: 50vh;
@@ -146,14 +146,6 @@ body{
     flex-direction: row;
     
 }
-.firstScreenReloaded{
-    display: flex;
-   justify-content: space-around;
-   flex-direction: column;
-   height: 56vh;
-   width: 56vh;
-
-}
 .optimismDisplay{
    color: orangered;
    font-family: 'Barrio', cursive;
@@ -166,3 +158,13 @@ body{
 .optimism{
     display: none;
 }
+.message{
+    color: white;
+    font-weight: bold;
+}
+@media screen and (min-width: 1600px) {
+ body{
+     display: flex;
+     justify-content: center;
+ }
+  }
