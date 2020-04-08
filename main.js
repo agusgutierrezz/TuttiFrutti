@@ -1,16 +1,16 @@
 let stickers = [
-    {name: "Banana", image : "/assets/img/banana.jpg"},
-    {name: "Bear", image : "/assets/img/bear.jpg"},
-    {name: "Bee", image : "/assets/img/bee.jpg"},
-    {name: "Car", image : "/assets/img/car.jpg"},
-    {name: "Carrot", image : "/assets/img/carrot.jpg"},
-    {name: "Cow", image : "/assets/img/cow.jpg"},
-    {name: "Dog", image : "/assets/img/cat.jpg"},
-    {name: "Duck", image : "/assets/img/duck.jpg"},
-    {name: "Donut", image : "/assets/img/donut.jpg"},
-    {name: "Pig", image : "/assets/img/pig.jpg"},
-    {name: "Plane", image : "/assets/img/plane.jpg"},
-    {name: "Pizza", image : "/assets/img/pizza.jpg"}
+    {name: "Banana", image : "./assets/img/banana.jpg"},
+    {name: "Bear", image : "./assets/img/bear.jpg"},
+    {name: "Bee", image : "./assets/img/bee.jpg"},
+    {name: "Car", image : "./assets/img/car.jpg"},
+    {name: "Carrot", image : "./assets/img/carrot.jpg"},
+    {name: "Cow", image : "./assets/img/cow.jpg"},
+    {name: "Dog", image : "./assets/img/cat.jpg"},
+    {name: "Duck", image : "./assets/img/duck.jpg"},
+    {name: "Donut", image : "./assets/img/donut.jpg"},
+    {name: "Pig", image : "./assets/img/pig.jpg"},
+    {name: "Plane", image : "./assets/img/plane.jpg"},
+    {name: "Pizza", image : "./assets/img/pizza.jpg"}
 ]
 let letters = ["B","C","D","P"]
 
