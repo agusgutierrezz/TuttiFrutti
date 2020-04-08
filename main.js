@@ -53,6 +53,7 @@ let letters = ["B","C","D","P"]
        if (arrayShuffled.hasOwnProperty(key)) {
            const element = arrayShuffled[key];
            if(element.name[0] !== currentLetter){
+               console.log(element.name[0])
             var image = new Image(150,150)
             image.src = element.image
             const lugar = document.querySelector(".car")
@@ -109,7 +110,9 @@ let letters = ["B","C","D","P"]
     function loseMessage(){
         let node = document.querySelector(".helper");
         node.classList.remove("helper")
-        node.classList.add("help")
+        node.classList.add("help","animated","infinite","swing")
+        let background = document.querySelector(".displayGame")
+        background.classList.add("loser")
         }
      function gameGreetings(){
         let timeoutID

@@ -30,6 +30,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    max-width: fit-content;
 }
 
 .car img{
@@ -55,25 +56,23 @@ body{
     font-size: 11vh;
     color: #FF3344;
 }
-.help p{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 6vh;
-    color: #FF3344;
-}
 .help{
-    background-position: top;
     width: 50%;
+    font-size: 8vh;
     height: 50vh;
     position: absolute;
     top: 20vh;
     right: 50vh;
     z-index: 1;
-    background-color: #ffd400;
+    background: rgb(23,22,56);
+    background: linear-gradient(180deg, rgba(23,22,56,1) 0%, rgba(245,88,143,1) 50%, rgba(205,76,238,1) 100%);
     text-align: center;
     display: flex;
+    font-family: 'Barrio', cursive;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color:white;
 }
 .loser{
     display: none;
