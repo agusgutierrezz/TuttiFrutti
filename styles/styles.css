@@ -162,6 +162,9 @@ body{
     color: white;
     font-weight: bold;
 }
+.totalWinner{
+    display: none;
+}
 @media screen and (min-width: 1600px) {
  body{
      display: flex;
