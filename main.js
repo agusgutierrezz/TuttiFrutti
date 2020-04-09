@@ -63,7 +63,7 @@ return a;
 //start the game choosing a button
 
 function chooseButton(){
-     document.querySelector(".displayGame").style.display = "none"
+    let display =document.querySelector(".displayGame").style.display = "none"
     let buttonC = document.getElementById("ce")
     console.log(buttonC)
     let buttonD = document.getElementById("de")
