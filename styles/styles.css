@@ -152,8 +152,11 @@ body{
     display: none;
 }
 .message{
-    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    color:white;
     font-weight: bold;
+    
 }
 .totalWinner{
     display: none;
@@ -179,9 +182,16 @@ justify-content: space-around;
 .chooseNone{
     display: none;
 }
-@media screen and (min-width: 1600px) {
- body{
-     display: flex;
-     justify-content: space-between;
- }
+  @media screen and (min-width: 1600px) {
+    .cardBox{
+        width: 50%;
+    }
+  }
+  @media screen and (min-width: 1900px) {
+    .cardBox{
+        width: 43%;
+    }
+    .displayGame {
+        margin-top: 6%;
+    }
   }
