@@ -92,7 +92,7 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 51%;
-    margin-top: 1%;
+    margin: 10vh;
 }
 .letter h1{
     font-family: 'Barrio', cursive;
@@ -139,13 +139,6 @@ body{
 .score {
     display: none;
 }
-.letras {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    flex-direction: row;
-    
-}
 .optimismDisplay{
    color: orangered;
    font-family: 'Barrio', cursive;
@@ -165,9 +158,30 @@ body{
 .totalWinner{
     display: none;
 }
+.noLetter{
+    display: none;
+}
+.choose{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.choose1 {
+display: flex;
+justify-content: space-around;
+}
+.displayLetter{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.chooseNone{
+    display: none;
+}
 @media screen and (min-width: 1600px) {
  body{
      display: flex;
-     justify-content: center;
+     justify-content: space-between;
  }
   }

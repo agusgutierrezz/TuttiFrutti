@@ -1,3 +1,25 @@
+window.localStorage.clear()
+
+function usedLetters(){
+    if (localStorage.getItem("test")) {
+        newArray = JSON.parse(localStorage.getItem("test"));
+    } else {
+        // No data, start with an empty array
+        newArray = [];
+    }
+    console.log("letras usadas" + newArray)
+    return newArray
+}
+function toUseLetters(){
+    if (localStorage.getItem("nuevo")) {
+        newArray = JSON.parse(localStorage.getItem("nuevo"));
+    } else {
+        // No data, start with an empty array
+        newArray = [];
+    }
+    console.log("letras que se pueden usar " + newArray)
+    return newArray
+}
 let stickers = [{
     name: "Banana",
     image: "./assets/img/banana.jpg"
@@ -60,42 +82,10 @@ for (i = a.length - 1; i > 0; i--) {
 }
 return a;
 }
-//start the game choosing a button
 
-function chooseButton(){
-     document.querySelector(".displayGame").style.display = "none"
-    let buttonC = document.getElementById("ce")
-    console.log(buttonC)
-    let buttonD = document.getElementById("de")
-    let buttonB = document.getElementById("be")
-    let buttonP = document.getElementById("pe")
-    buttonC.onclick = function choice(){
-    buttonC.classList.add("animated","infinite","bounce")
-      return displayImages("C")
-    }
-    buttonD.onclick = function choiceD(){
-        buttonD.classList.add("animated","infinite","bounce")
-        return displayImages("D")
-    }
-    buttonP.onclick = function choiceP(){
-    buttonP.classList.add("animated","infinite","bounce")
-        return displayImages("P")
-    }
-    buttonB.onclick = function choiceB(){
-    buttonB.classList.add("animated","infinite","bounce")
-        return displayImages("B")
-    } 
-}
-
-//display the grid of images
-
+//main function of the game
 function displayImages(letter) {
-document.querySelector(".displayGame").style.display = "flex"
-let theLetter = document.getElementById("currentLetter")
-theLetter.innerText = letter
-let choices = document.querySelector(".choose")
-choices.classList.remove("choose")
-choices.classList.add("chooseNone")
+displayLetter(letter)
 let currentLetter = letter
 const scorePlace = document.querySelector(".score span")
 const chances = document.querySelector(".chances")
@@ -148,11 +138,14 @@ for (const key in arrayShuffled) {
     }
 }
 }
-
+// display the letter 
+function displayLetter(letter){
+let place = document.querySelector(".letter h1")
+place.innerText = letter
+}
 //function that show the winner state
 
 function party() {
-document.querySelector(".displayGame").style.display = "none"
 let node = document.querySelector(".loser");
 node.classList.remove("loser")
 node.classList.add("winner", "animated", "infinite", "swing")
@@ -175,13 +168,16 @@ function reload() {
 //show loser message
 
 function loseMessage() {
-document.querySelector(".displayGame").style.display = "none"
 let node = document.querySelector(".helper");
 node.classList.remove("helper")
 node.classList.add("help", "animated", "infinite", "swing")
 let background = document.querySelector(".displayGame")
 background.classList.add("loser")
 }
+
+//function to show tries left
+
+
 
 //functions to congrats
 
@@ -206,5 +202,25 @@ function show() {
     optimism.classList.add("chances")
 }
 }
-//DANGER
-chooseButton()
+
+//START THE GAME 
+function pickLetter(){
+    let letters = toUseLetters()
+    let usedArrays = usedLetters()
+    if(letters.length <= 0){
+    letters.push("P","C","D","B")
+    }
+    let currentIndex = Math.floor(Math.random()* letters.length)
+    let currentLetter = letters[currentIndex]
+    console.log(currentLetter)
+    newArray.push(currentLetter);
+    localStorage.setItem("test", JSON.stringify(newArray));
+    const index = usedArrays.indexOf(currentLetter);
+    if (index > -1) {
+        letters.splice(index, 1);
+    }
+    localStorage.setItem("nuevo", JSON.stringify(letters) )
+    return currentLetter
+}
+
+displayImages(pickLetter())
