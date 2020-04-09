@@ -92,10 +92,12 @@ body{
     align-items: center;
     border-radius: 51%;
     margin: 10vh;
+    padding: 3em;
+    border: 7px inset #FF00B7;
 }
 .letter h1{
     font-family: 'Barrio', cursive;
-    font-size: 100px;
+    font-size: 80px;
     color:#FF00B7 ;
     font-weight: bold;
 }
@@ -115,9 +117,13 @@ body{
 .title{
     padding: 8px;
     text-align: center;
+    margin: 1em;
 }
 .chances{
     display: none;
+}
+.choose .title h1{
+    font-size: 10em;
 }
 .chancesDisplay{
     color:#FF00B7;
@@ -163,62 +169,36 @@ body{
 .noLetter{
     display: none;
 }
-.choose{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-}
+
 .choose1 {
 display: flex;
+flex-direction: row;
 justify-content: space-around;
+align-items: center;
 }
 .displayLetter{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
 }
 .chooseNone{
     display: none;
 }
-.stars img{
-    width: 13vh;
-    position: absolute;
-    bottom:29em;
-    right: 10em;
+.let{
+   margin: 2em;
 }
-.stars1 img{
-    width: 13vh;
-    position: absolute;
-    bottom:17em;
-    right: 17em;
-}
-.stars2 img{
-    width: 17vh;
-    position: absolute;
-    bottom: 9em;
-    left: 5em;
-}
-.stars3 img{
-    width: 17vh;
-    position: absolute;
-    bottom: 30em;
-    left: 5em;
-}
-.saturn img{
-    width: 50vh;
-    position: absolute;
-    bottom: 24em;
-    left: 46em;
-}
+
+
 
   @media screen and (min-width: 1600px) {
     .cardBox{
         width: 50%;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
   }
   @media screen and (min-width: 1800px) {
