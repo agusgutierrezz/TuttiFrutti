@@ -215,6 +215,7 @@ justify-content: space-around;
     bottom: 24em;
     left: 46em;
 }
+
   @media screen and (min-width: 1600px) {
     .cardBox{
         width: 50%;
