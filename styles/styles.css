@@ -11,7 +11,7 @@ body {
   display: none;
 }
 .cardBox {
-  width: 60%;
+  width: 50%;
 }
 .letterContainer {
   width: 30%;
@@ -38,7 +38,7 @@ body {
 }
 .winner {
   background-image: url("../assets/img/winner.jpg");
-  background-position: top;
+  background-position: contain;
   width: 50%;
   height: 50vh;
   position: absolute;
@@ -61,13 +61,7 @@ body {
   top: 20vh;
   right: 50vh;
   z-index: 1;
-  background: rgb(23, 22, 56);
-  background: linear-gradient(
-    180deg,
-    rgba(23, 22, 56, 1) 0%,
-    rgba(245, 88, 143, 1) 50%,
-    rgba(205, 76, 238, 1) 100%
-  );
+background-image: url("../assets/img/loser.jpg");
   text-align: center;
   display: flex;
   font-family: "Barrio", cursive;
@@ -106,8 +100,8 @@ body {
 }
 .title h1 {
   font-family: "Barrio", cursive;
-  font-size: 60px;
-  color: #ffd400;
+  font-size: 150px;
+  color: white;
   font-weight: bold;
 }
 .title p {
@@ -190,14 +184,19 @@ body {
   margin: 2em;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 300px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   body {
     height: 100vh;
   }
   .title {
     padding: 0px;
   }
-  .title h1 {
+  .letterContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .choose h1 {
     font-size: 4em;
     color: #fafafa;
   }
@@ -210,6 +209,9 @@ body {
   }
   .title p {
     font-size: 2em;
+  }
+  #inGame {
+    display: none;
   }
   .car img {
     width: 7rem;
@@ -225,9 +227,7 @@ body {
   .car {
     margin-top: 0px;
   }
-  .letterContainer {
-    width: 100%;
-  }
+
   .letter {
     margin: 1em;
     padding: 3em;
@@ -237,7 +237,8 @@ body {
   .letter h1 {
     font-size: 3em;
   }
-  .winner {
+  .winner,
+  .help {
     width: 95%;
     background-position: revert;
     right: 1vh;
@@ -249,6 +250,8 @@ body {
     margin-top: 0;
     margin-left: 10vh;
   }
+.help p{
+    font-size: 0.75em;
 }
 .optimismDisplay {
   top: 72%;
@@ -261,8 +264,9 @@ body {
   display: none;
 }
 .chancesDisplay {
+    text-align: center;
   font-size: 4vh;
-  top: 89%;
+  top: 70%;
   right: 14%;
 }
 @media screen and (min-width: 1200px) {
