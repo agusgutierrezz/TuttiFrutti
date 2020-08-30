@@ -294,10 +294,10 @@ background-image: url("../assets/img/loser.jpg");
     top: 45%;
   }
 }
-/*
+
 @media screen and (min-width: 1800px) {
   .cardBox {
-    width: 43%;
+    width: 40%;
   }
   .displayGame {
     margin-top: 6%;
@@ -305,4 +305,4 @@ background-image: url("../assets/img/loser.jpg");
   .title {
     margin-top: 3em;
   }
-} */
+}
