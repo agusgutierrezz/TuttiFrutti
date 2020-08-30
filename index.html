@@ -1,100 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Barrio&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,900&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Barrio&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="contain">
-    <div class="loser">
+      <div class="loser">
         <h1 class="animated fadeIn">You are awesome!!!!!!</h1>
-    </div>
-    <div class="totalWinner">
+      </div>
+      <div class="totalWinner">
         <h1 class="animated fadeIn">You win the game!!!!!!</h1>
-    </div>
-    <div class="helper">
+      </div>
+      <div class="helper">
         <p id="hint">Let´s try with another letter!</p>
         <p>You can do this!</p>
-    </div>
-    <div class="displayGame">
+      </div>
+      <div class="displayGame">
         <div class="letterContainer">
-            <div class="title">
-                <h1>Tutti Frutti</h1>
-                <p>Choose the images according to the first letter of their name!</p>
-            </div>
-            <div class="score">
-                <span></span>
-            </div>
-            <div class="chances animated infinite pulse">
-                <span>You have 3 tries</span>
-            </div>
-            <div class="optimism">
-                <span>Fantastic!</span>
-            </div>
-            <div class="message animated tada infinite slower">
-                <h2>You have <span>4</span> tries left!</h2>
-            </div>
-            <div class="letter animated infinite bounce">
-                <h1 id="currentLetter">P</h1>
-            </div>
-          
-        </div>
-        
-        <div class="cardBox">
-            
-            <div class="car">
-            </div>
-
-        </div>
-    </div>
-</div>
-    <div class="choose">
-        <div class="title animated fadeIn">
+          <div class="title">
             <h1>Tutti Frutti</h1>
-            <p>Choose a letter to start the game!</p>
-        </div>
-        <div class="displayLetter animated fadeIn">
-            <div class="choose1">
-                <div class="let animated infinite tada slower">
-                    <img id="de" src="./assets/img/letterd.png" alt="">
-                </div>
-                <div class="let animated infinite tada slower">
-                    <img id="ce" src="./assets/img/letterc.png" alt="">
-                </div>  
-            
-         
-            <div class="let animated infinite tada slower">
-                <img id="be" src="./assets/img/letterb.png" alt="">
-            </div>
-            <div class="let animated infinite tada slower">
-                <img id="pe" src="./assets/img/letterp.png" alt="">
-           
+            <p>
+              Choose the images according to the first letter of their name!
+            </p>
+          </div>
+          <div class="score">
+            <span></span>
+          </div>
+          <div class="chances animated infinite pulse">
+            <span>You have 3 tries</span>
+          </div>
+          <div class="optimism">
+            <span>Fantastic!</span>
+          </div>
+          <div class="message animated tada infinite slower">
+            <h2>You have <span>4</span> tries left!</h2>
+          </div>
+          <div class="letter animated infinite bounce">
+            <h1 id="currentLetter">P</h1>
           </div>
         </div>
+
+        <div class="cardBox">
+          <div class="car"></div>
         </div>
-    
+      </div>
+    </div>
+    <div class="choose">
+      <div class="title animated fadeIn">
+        <h1>Tutti Frutti</h1>
+        <p>Choose a letter to start the game!</p>
+      </div>
+      <div class="displayLetter animated fadeIn">
+        <div class="choose1">
+          <div class="let animated infinite tada slower">
+            <img id="de" src="./assets/img/letterd.png" alt="" />
+          </div>
+          <div class="let animated infinite tada slower">
+            <img id="ce" src="./assets/img/letterc.png" alt="" />
+          </div>
+
+          <div class="let animated infinite tada slower">
+            <img id="be" src="./assets/img/letterb.png" alt="" />
+          </div>
+          <div class="let animated infinite tada slower">
+            <img id="pe" src="./assets/img/letterp.png" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

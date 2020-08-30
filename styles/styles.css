@@ -1,214 +1,304 @@
-body{
-    position: relative;
-    background-image: url("../assets/img/3644242.jpg");
-    background-size: cover;
+body {
+  background-image: url("../assets/img/3644242.jpg");
+  background-size: cover;
 }
 
 .displayGame {
-    display: flex;
-    justify-content: center;
-   
+  display: flex;
+  justify-content: center;
 }
-.noDisplay{
-    display: none;
+.noDisplay {
+  display: none;
 }
-.cardBox{
-    width: 60%;
+.cardBox {
+  width: 60%;
 }
 .letterContainer {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
-.car{
-    margin-top: 10vh;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 119vh;
+.car {
+  margin-top: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 119vh;
 }
 
-.car img{
-    display: block;
-    border: 7px inset #FF00B7;
-    border-radius: 19px 19px 0px 27px;
-    margin: 10px;
+.car img {
+  display: block;
+  border: 7px inset #ff00b7;
+  border-radius: 19px 19px 0px 27px;
+  margin: 10px;
 }
 .winner {
-    background-image: url("../assets/img/winner.jpg");
-    background-position: top;
-    width: 50%;
-    height: 50vh;
-    position: absolute;
-    top: 20vh;
-    right: 50vh;
-    z-index: 1;
+  background-image: url("../assets/img/winner.jpg");
+  background-position: top;
+  width: 50%;
+  height: 50vh;
+  position: absolute;
+  top: 20vh;
+  right: 50vh;
+  z-index: 1;
 }
-.winner h1{
-    font-family: 'Henny Penny', cursive;
-    margin-top: 17vh;
-    margin-left: 30vh;
-    font-size: 11vh;
-    color: #FF3344;
+.winner h1 {
+  font-family: "Henny Penny", cursive;
+  margin-top: 17vh;
+  margin-left: 30vh;
+  font-size: 11vh;
+  color: #ff3344;
 }
-.help{
-    width: 50%;
-    font-size: 8vh;
-    height: 50vh;
-    position: absolute;
-    top: 20vh;
-    right: 50vh;
-    z-index: 1;
-    background: rgb(23,22,56);
-    background: linear-gradient(180deg, rgba(23,22,56,1) 0%, rgba(245,88,143,1) 50%, rgba(205,76,238,1) 100%);
-    text-align: center;
-    display: flex;
-    font-family: 'Barrio', cursive;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color:white;
+.help {
+  width: 50%;
+  font-size: 8vh;
+  height: 50vh;
+  position: absolute;
+  top: 20vh;
+  right: 50vh;
+  z-index: 1;
+  background: rgb(23, 22, 56);
+  background: linear-gradient(
+    180deg,
+    rgba(23, 22, 56, 1) 0%,
+    rgba(245, 88, 143, 1) 50%,
+    rgba(205, 76, 238, 1) 100%
+  );
+  text-align: center;
+  display: flex;
+  font-family: "Barrio", cursive;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
 }
-.loser{
-    display: none;
+.loser {
+  display: none;
 }
-.exitHelp{
-    display : none;
+.exitHelp {
+  display: none;
 }
-.helper{
-    display: none;
+.helper {
+  display: none;
 }
-.letter{
-    /* background: linear-gradient(45deg,#F17C58,#E94584,#24AADB,#27DBB1,#FFDC18,#FF3706); */
-    background-color:#ffd400 ;
-    height: 125px;
-    width: 125px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 51%;
-    margin: 10vh;
-    padding: 3em;
-    border: 7px inset #FF00B7;
+.letter {
+  /* background: linear-gradient(45deg,#F17C58,#E94584,#24AADB,#27DBB1,#FFDC18,#FF3706); */
+  background-color: #ffd400;
+  height: 125px;
+  width: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 51%;
+  margin: 10vh;
+  padding: 3em;
+  border: 7px inset #ff00b7;
 }
-.letter h1{
-    font-family: 'Barrio', cursive;
-    font-size: 80px;
-    color:#FF00B7 ;
-    font-weight: bold;
+.letter h1 {
+  font-family: "Barrio", cursive;
+  font-size: 80px;
+  color: #ff00b7;
+  font-weight: bold;
 }
-.title h1{
-    font-family: 'Barrio', cursive;
-    font-size: 60px;
-    color:#ffd400;
-    font-weight: bold;
+.title h1 {
+  font-family: "Barrio", cursive;
+  font-size: 60px;
+  color: #ffd400;
+  font-weight: bold;
 }
-.title p{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 30px;
-    color:white;
-    font-weight: bold;
+.title p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+.title {
+  padding: 8px;
+  text-align: center;
+  margin: 1em;
+}
+.chances {
+  display: none;
+}
 
+.chancesDisplay {
+  color: #ff00b7;
+  font-family: "Barrio", cursive;
+  font-size: 7vh;
+  top: 30%;
+  right: 30%;
+  z-index: 1;
+  position: absolute;
+  background-color: #ffd400;
+  padding: 1em;
+  border-radius: 13px;
 }
-.title{
-    padding: 8px;
-    text-align: center;
-    margin: 1em;
-}
-.chances{
-    display: none;
-}
-.choose .title h1{
-    font-size: 10em;
-}
-.chancesDisplay{
-    color:#FF00B7;
-    font-family: 'Barrio', cursive;
-    font-size: 7vh;
-    top: 30%;
-    right:30%;
-    z-index: 1;
-    position: absolute;
-    background-color: #ffd400;
-
-}
-.optimism{
-    color: white;
-    font-weight: bold;
-    font-size: 4vh;
+.optimism {
+  color: white;
+  font-weight: bold;
+  font-size: 4vh;
 }
 .score {
-    display: none;
+  display: none;
 }
-.optimismDisplay{
-   color: orangered;
-   font-family: 'Barrio', cursive;
-   font-size: 20vh;
-   top: 30%;
-   right: 30%;
-   z-index: 1;
-   position: absolute;
+.optimismDisplay {
+  color: orangered;
+  font-family: "Barrio", cursive;
+  font-size: 3rem;
+  top: 30%;
+  right: 30%;
+  z-index: 1;
+  position: absolute;
+  background-color: #ffd400;
 }
-.optimism{
-    display: none;
+.optimism {
+  display: none;
 }
-.message{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 30px;
-    color:white;
-    font-weight: bold;
-    
+.message {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
 }
-.totalWinner{
-    display: none;
+.totalWinner {
+  display: none;
 }
-.noLetter{
-    display: none;
+.noLetter {
+  display: none;
 }
 
 .choose1 {
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
-.displayLetter{
-    display: flex;
-    justify-content: space-between;
+.displayLetter {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+.chooseNone {
+  display: none;
+}
+.let {
+  margin: 2em;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    height: 100vh;
+  }
+  .title {
+    padding: 0px;
+  }
+  .title h1 {
+    font-size: 4em;
+    color: #fafafa;
+  }
+  .let img {
+    width: 5rem;
+  }
+  .choose1 {
+    width: 80%;
+    flex-wrap: wrap;
+  }
+  .title p {
+    font-size: 2em;
+  }
+  .car img {
+    width: 7rem;
+    height: 7rem;
+    margin: 5px;
+  }
+  .displayGame {
     flex-direction: column;
+  }
+  .cardBox {
+    width: 100%;
+  }
+  .car {
+    margin-top: 0px;
+  }
+  .letterContainer {
+    width: 100%;
+  }
+  .letter {
+    margin: 1em;
+    padding: 3em;
+    width: 2rem;
+    height: 3rem;
+  }
+  .letter h1 {
+    font-size: 3em;
+  }
+  .winner {
+    width: 95%;
+    background-position: revert;
+    right: 1vh;
+    display: flex;
     align-items: center;
-}
-.chooseNone{
-    display: none;
-}
-.let{
-   margin: 2em;
-}
-
-
-
-  @media screen and (min-width: 1600px) {
-    .cardBox{
-        width: 50%;
-    }
-    body{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
   }
-  @media screen and (min-width: 1800px) {
-    .cardBox{
-        width: 43%;
-    }
-    .displayGame {
-        margin-top: 6%;
-    }
-    .title {
-        margin-top: 3em;
-    }
+  .winner h1 {
+    font-size: 8vh;
+    margin-top: 0;
+    margin-left: 10vh;
   }
+}
+.optimismDisplay {
+  top: 72%;
+
+  right: 12%;
+  padding: 1rem;
+  border-radius: 13px;
+}
+.message {
+  display: none;
+}
+.chancesDisplay {
+  font-size: 4vh;
+  top: 89%;
+  right: 14%;
+}
+@media screen and (min-width: 1200px) {
+  .cardBox {
+    width: 50%;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .title h1 {
+    font-size: 8em;
+    color: #fafafa;
+    margin-top: 2rem;
+  }
+  .optimismDisplay {
+    font-size: 10vh;
+    top: 45%;
+
+    right: 21%;
+  }
+  .chancesDisplay {
+    font-size: 7vh;
+    top: 45%;
+  }
+}
+/*
+@media screen and (min-width: 1800px) {
+  .cardBox {
+    width: 43%;
+  }
+  .displayGame {
+    margin-top: 6%;
+  }
+  .title {
+    margin-top: 3em;
+  }
+} */
